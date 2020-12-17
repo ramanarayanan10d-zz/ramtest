@@ -1,0 +1,9 @@
+name: List S3 Contents - Multi OS
+on:
+  push
+jobs:
+  listS3:
+    runs-on: ubuntu-latest
+    steps:
+    - name: aws configuration
+      run: echo "helloworld"
