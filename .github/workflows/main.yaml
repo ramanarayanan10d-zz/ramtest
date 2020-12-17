@@ -17,10 +17,12 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
-      - name: Build, tag, and push API Gateway image to Amazon ECR
+      - name: Build, tag, and push image to Amazon ECR
         working-directory: ./application/services/custom_services/apigateway
+        env:
+          ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
+          ECR_REPOSITORY: ramtest-apigateway
+          IMAGE_TAG: 0.0.1
         run: |
-          pwd
-          docker build -t ${{ steps.login-ecr.outputs.registry }}/geppetto-generatedcode-apigateway:0.0.1 .
-          docker push ${{ steps.login-ecr.outputs.registry }}/geppetto-generatedcode-apigateway:0.0.1
-
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
