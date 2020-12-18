@@ -55,4 +55,4 @@ jobs:
         AWS_S3_BUCKET: ram-geppetto-test
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
-        SOURCE_DIR: "application/clients/desktop/ramtest/dist"
+        SOURCE_DIR: "application/clients/desktop/ramtest/dist/GeppettoBuilder"
