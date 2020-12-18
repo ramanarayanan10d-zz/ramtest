@@ -40,7 +40,7 @@ jobs:
       with:
         node-version: 10
     - name: Installing node modules
-      working-directory: ./application/clients/desktop
+      working-directory: ./application/client/desktop
       run: |
         npm install -g @angular/cli
         npm i node-sass@4.8.3
