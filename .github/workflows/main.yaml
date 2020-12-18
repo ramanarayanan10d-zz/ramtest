@@ -45,7 +45,7 @@ jobs:
         npm install -g @angular/cli
         npm i node-sass@4.8.3
         npm i 
-        ng build --configuration=devops
+        ng build
     - name: Uploaging dist files into the S3 bucket
       uses: jakejarvis/s3-sync-action@v0.5.1
       with:
