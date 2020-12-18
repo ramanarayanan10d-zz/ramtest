@@ -44,6 +44,7 @@ jobs:
       run: |
         npm install -g @angular/cli
         npm i node-sass@4.8.3
+        npm i @ng-select/ng-select
         npm i 
         ng build
     - name: Uploaging dist files into the S3 bucket
