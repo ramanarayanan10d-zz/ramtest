@@ -40,7 +40,7 @@ jobs:
       with:
         node-version: 10
     - name: Installing node modules
-      working-directory: ./application/client/desktop
+      working-directory: ./application/client/desktop/ramtest
       run: |
         npm install -g @angular/cli
         npm i node-sass@4.8.3
@@ -54,4 +54,4 @@ jobs:
         AWS_S3_BUCKET: ram-geppetto-test
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
-        SOURCE_DIR: "application/clients/desktop/dist/ramtest"
+        SOURCE_DIR: "application/clients/desktop/ramtest/dist/ramtest"
