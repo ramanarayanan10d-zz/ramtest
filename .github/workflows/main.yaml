@@ -65,7 +65,7 @@ jobs:
         npm i node-sass@4.8.3
         npm i @ng-select/ng-select
         npm i 
-        ng build
+        ng build --configuration=production
     - name: Uploading dist files into the S3 bucket
       uses: jakejarvis/s3-sync-action@v0.5.1
       with:
