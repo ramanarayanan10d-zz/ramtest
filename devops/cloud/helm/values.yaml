@@ -61,7 +61,7 @@ deployment:
   customImagePullPolicy: Always
   apigateway:
      name: apigateway
-     image: ramanarayananravi/ramtest-apigateway:1.0
+     image: 967636366309.dkr.ecr.us-east-1.amazonaws.com/ramtest-apigateway:0.0.1
   mongo:
      name: mongo
      image: mongo:3.2   
