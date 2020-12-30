@@ -48,7 +48,6 @@ jobs:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
           args:
-            helm uninstall ramtest 
             helm install ramtest ./devops/cloud/helm
   Upload_FrontEnd_S3:
     runs-on: ubuntu-latest
