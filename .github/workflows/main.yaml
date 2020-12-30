@@ -31,6 +31,7 @@ jobs:
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
   deploy:
     runs-on: ubuntu-latest
+    needs: Upload_APIGateway_Image_ECR
     steps:
       - uses: actions/checkout@v2
 
@@ -46,7 +47,7 @@ jobs:
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
-          args: helm install ./devops/cloud/helm --name helm
+          args: helm install ./devops/cloud/helm ramtest
   Upload_FrontEnd_S3:
     runs-on: ubuntu-latest
     needs: deploy
